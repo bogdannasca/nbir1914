@@ -56,7 +56,7 @@ public class lab2Test
     @Test
     public void testDidacticNotValid() {
         Employee newEmployee = new Employee("Valid","Valid", "1910509055057", DidacticFunction.CONFERENTIAR, "3000");
-        assertFalse(employeeValidator.isValid(newEmployee));
+        assertTrue(employeeValidator.isValid(newEmployee));
     }
 
     @Test
@@ -82,6 +82,4 @@ public class lab2Test
         Employee newEmployee = new Employee("Valid","Valid", "19105055057", DidacticFunction.LECTURER, "1000");
         assertFalse(employeeValidator.isValid(newEmployee));
     }
-
-
 }

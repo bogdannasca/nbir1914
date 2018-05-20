@@ -22,7 +22,7 @@ public class EmployeeMock implements EmployeeRepositoryInterface {
 		Employee Ionel   = new Employee("Eu","Pacuraru", "1234567890876", DidacticFunction.ASISTENT, "2500");
 		Employee Mihai   = new Employee("Eu","Dumitrescu", "1234567890876", DidacticFunction.LECTURER, "2500");
 		Employee Ionela  = new Employee("Eu","Ionescu", "1234567890876", DidacticFunction.LECTURER, "2500");
-		Employee Mihaela = new Employee("Eu","Pacuraru", "1234567890876", DidacticFunction.ASISTENT, "2500");
+		Employee Mihaela = new Employee("Eu","Pacuraru", "123456789087", DidacticFunction.ASISTENT, "2500");
 		Employee Vasile  = new Employee("Eu","Georgescu", "1234567890876", DidacticFunction.CONFERENTIAR,  "2500");
 		Employee Marin   = new Employee("Eu","Puscas", "1234567890876", DidacticFunction.TEACHER,  "2500");
 		
@@ -50,7 +50,11 @@ public class EmployeeMock implements EmployeeRepositoryInterface {
 
 	@Override
 	public void modifyEmployee(Employee oldEmployee, Employee newEmployee) {
-		// TODO Auto-generated method stub
+        for (int i = 0; i < employeeList.size(); ++i) {
+            if(employeeList.get(i).getCnp().equals(oldEmployee.getCnp())) {
+                employeeList.set(i, newEmployee);
+            }
+        }
 	}
 
 	@Override
@@ -62,6 +66,10 @@ public class EmployeeMock implements EmployeeRepositoryInterface {
 	public List<Employee> getEmployeeByCriteria(String criteria) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void populate() {
+
 	}
 
 }
