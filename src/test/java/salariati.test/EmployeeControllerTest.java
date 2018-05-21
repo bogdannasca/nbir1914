@@ -12,8 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static salariati.enumeration.DidacticFunction.CONFERENTIAR;
 
 public class EmployeeControllerTest {
-    private EmployeeRepositoryInterface employeeRepository;
-    private EmployeeController employeeController;
+    private EmployeeRepositoryInterface employeeRepository = new EmployeeMock();
+    private EmployeeController employeeController = new EmployeeController(employeeRepository);
 
     @BeforeEach
     public void setUp() {
@@ -56,7 +56,7 @@ public class EmployeeControllerTest {
 
     @Test
     public void modifyEmployee_TC4() {
-        employeeRepository.addEmployee(new Employee("Puscas", "Marin", "1234567890871", DidacticFunction.CONFERENTIAR, "2500"));
+        employeeRepository.addEmployee(new Employee("Puscas", "Marin", "1234567890871", CONFERENTIAR, "2500"));
         try{
             employeeController.modifyEmployee("1234567890871", "lecturer");
             assertEquals(employeeRepository.getEmployeeList().get(6).getFunction(), DidacticFunction.LECTURER);
