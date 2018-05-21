@@ -1,13 +1,10 @@
 package salariati.test;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import salariati.controller.EmployeeController;
 import salariati.enumeration.DidacticFunction;
 import salariati.model.Employee;
-import salariati.repository.implementations.EmployeeImpl;
 import salariati.repository.interfaces.EmployeeRepositoryInterface;
 import salariati.repository.mock.EmployeeMock;
 
