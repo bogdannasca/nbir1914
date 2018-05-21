@@ -11,7 +11,7 @@ import salariati.repository.mock.EmployeeMock;
 import static org.junit.jupiter.api.Assertions.*;
 import static salariati.enumeration.DidacticFunction.CONFERENTIAR;
 
-class EmployeeControllerTest {
+public class EmployeeControllerTest {
     private EmployeeRepositoryInterface employeeRepository;
     private EmployeeController employeeController;
 
