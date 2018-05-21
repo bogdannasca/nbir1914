@@ -56,7 +56,7 @@ public class EmployeeControllerTest {
 
     @Test
     public void modifyEmployee_TC4() {
-        employeeRepository.addEmployee(new Employee("Puscas", "Marin", "1234567890871", CONFERENTIAR, "2500"));
+        employeeRepository.addEmployee(new Employee("Puscas", "Marin", "1234567890871", DidacticFunction.CONFERENTIAR, "2500"));
         try{
             employeeController.modifyEmployee("1234567890871", "lecturer");
             assertEquals(employeeRepository.getEmployeeList().get(6).getFunction(), DidacticFunction.LECTURER);
