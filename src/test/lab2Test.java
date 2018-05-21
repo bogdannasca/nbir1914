@@ -78,7 +78,7 @@ public class lab2Test
     }
 
     @Test
-    public void testCNPLessLenght() {
+    public void testCNPLessLength() {
         Employee newEmployee = new Employee("Valid","Valid", "19105055057", DidacticFunction.LECTURER, "1000");
         assertFalse(employeeValidator.isValid(newEmployee));
     }
